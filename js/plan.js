@@ -56,5 +56,6 @@ const oldHome=A.home;A.dash=['Dashboard',oldHome[1],'🏡','','page'];A.home=['T
 const sl=document.querySelector('#sb [data-id=home]');if(sl&&sl.lastChild)sl.lastChild.textContent='Today';const tl=document.querySelector('#tabs [data-id=home]');if(tl)tl.textContent='Today';
 // style
 const st=document.createElement('style');st.textContent=`#ptbar{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;background:#232323;color:#fff;border-radius:999px;padding:10px 12px 10px 18px;font-size:16px;font-weight:700;box-shadow:0 4px 16px rgba(0,0,0,.3);display:flex;gap:10px;align-items:center;cursor:pointer;max-width:calc(100vw - 24px)}#ptbar .st{font-weight:400;opacity:.8;font-size:14px}#ptbar button{border:0;border-radius:999px;padding:8px 14px;font-size:15px;font-weight:800;background:#f4c84e;color:#222;cursor:pointer}#ptbar.brk{background:#c75b00}#pttoast{display:none;position:fixed;left:50%;transform:translateX(-50%);top:16px;z-index:60;background:#fff;color:#222;border:3px solid #f4c84e;border-radius:16px;padding:14px 20px;font-size:20px;font-weight:700;max-width:min(560px,92vw);box-shadow:0 6px 24px rgba(0,0,0,.3);cursor:pointer}@media(max-width:900px){#ptbar{bottom:calc(76px + env(safe-area-inset-bottom))}}`;document.head.appendChild(st);
+window.PTPLAN={goal:s=>goal(s)/60,day:()=>day()};
 bar();
 })();
